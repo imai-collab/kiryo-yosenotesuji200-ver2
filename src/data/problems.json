@@ -1,0 +1,24 @@
+{
+  "appTitle": "©kiryoアプリ　５秒で解きたい３手詰①TEST",
+  "clearUrl": "https://ais-pre-x5hnwaz6bcxstyuj6qxrfz-87151204104.asia-northeast1.run.app/complete?book=01",
+  "problems": [
+    {
+      "id": 1,
+      "title": "第1問",
+      "description": "かんたん３手詰",
+      "initialSfen": "8l/8k/9/7L1/6N2/9/9/9/9 b 2r2b4g4s3n2l18p 1"
+    },
+    {
+      "id": 2,
+      "title": "第2問",
+      "description": "かんたん３手詰",
+      "initialSfen": "8s/8k/6G2/7L1/9/9/9/9/9 b 2r2b3g3s4n3l18p 1"
+    },
+    {
+      "id": 50,
+      "title": "第50問",
+      "description": "かんたん３手詰",
+      "initialSfen": "6r1l/8k/6R2/9/9/9/9/9/9 b G2b3g4s4n3l18p 1"
+    }
+  ]
+}

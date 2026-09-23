@@ -1,0 +1,8 @@
+{
+  "name": "寄せの手筋　解答サイズ縮小",
+  "description": "トップのタイトルは２行以内\n問題集並べ替え\nサイトへを追加\nクリア登録リンク実装",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
