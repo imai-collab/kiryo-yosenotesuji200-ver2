@@ -15,12 +15,19 @@ export interface Move {
   promote?: boolean;
 }
 
+export interface BranchSequence {
+  id: string;
+  name?: string;
+  moves: Move[];
+}
+
 export interface Problem {
   id: number;
   title: string;
   description: string;
   initialSfen: string; // SFEN format for initial board
   solution?: Move[]; // Sequence of correct moves (user, response, user...)
+  branches?: BranchSequence[]; // Alternative branches/responses
   answerImageUrl?: string; // Answer screenshot as Data URL
 }
 

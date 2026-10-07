@@ -157,6 +157,25 @@ export const cloneShogi = (shogiObj: any) => {
   return newShogi;
 };
 
+export const isSameMove = (m1?: Move, m2?: Move): boolean => {
+  if (!m1 || !m2) return false;
+  const sameFrom = (!m1.from && !m2.from) || (m1.from?.x === m2.from?.x && m1.from?.y === m2.from?.y);
+  const sameTo = m1.to?.x === m2.to?.x && m1.to?.y === m2.to?.y;
+  const samePiece = m1.piece === m2.piece;
+  const samePromote = Boolean(m1.promote) === Boolean(m2.promote);
+  return sameFrom && sameTo && samePiece && samePromote;
+};
+
+export const matchesMoveHistory = (sequence: Move[], history: Move[]): boolean => {
+  if (!sequence || !history || history.length > sequence.length) return false;
+  for (let i = 0; i < history.length; i++) {
+    if (!isSameMove(sequence[i], history[i])) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export const compressImage = (file: File, maxWidth = 1200, maxHeight = 1200, quality = 0.82): Promise<string> => {
   return new Promise((resolve) => {
     const reader = new FileReader();
